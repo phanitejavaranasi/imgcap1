@@ -1,0 +1,73 @@
+<!Doctype html>
+<html>
+    
+
+<style>
+    body{
+  font-family: 'Montserrat', sans-serif;
+  ;
+}
+.btn-group button {
+    background-image: linear-gradient(to right, #84fab0 0%, #8fd3f4 51%, #84fab0 100%);
+  color: rgb(255, 255, 255);
+  border: 5px solid #000000;
+  cursor: pointer; /* Pointer/hand icon */
+  width: 100%; /* Set a width if needed */
+  display: block; /* Make the buttons appear below each other */
+  font-size: 35px;
+  padding: 35%;
+  size: 20px;
+  
+}
+.btn-group input {
+    
+  color: rgb(255, 255, 255);
+  border: 5px solid #000000;
+  cursor: pointer; /* Pointer/hand icon */
+  width: 100%; /* Set a width if needed */
+  display: block; /* Make the buttons appear below each other */
+  font-size: 35px;
+  padding-top: 50%;
+  padding-bottom: 50%;
+  size: 20px;
+  
+}
+.btn-group input:not(:last-child) {
+  border-bottom: none; /* Prevent double borders */
+}
+
+/* Add a background color on hover */
+.btn-group input:hover {
+  background-color: #3e8e41;
+}
+
+.btn-group button:not(:last-child) {
+  border-bottom: none; /* Prevent double borders */
+}
+
+/* Add a background color on hover */
+.btn-group button:hover {
+  background-color: #3e8e41;
+  
+}
+.abcd {
+  background-image:linear-gradient(to right, #84fab0 0%, #8fd3f4 51%, #84fab0 100%) ;
+  border: 5px solid #000000;
+  
+  
+}
+</style>
+<body>
+
+<div class="btn-group">
+  
+  <form action="{{url_for('after')}}" method='POST' enctype='multipart/form-data'>
+    <div class="abcd">
+    <input type="file" name='file1'accept="image/*"  capture='camera'></div>
+    <button type="submit"name="btn"value='predict caption'><h1>Predict</h1></button>
+</form>
+</div>
+
+
+</body>
+</html>
